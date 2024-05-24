@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.landing-page-section {
+  width: 100vw;
+  height: 100vh;
+}
+.mincraft-page-land {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+}
+
+.game-instruction-container {
+  width: 90vw;
+  max-width: 1000px;
+  padding: 10px;
+  text-align: center;
+  z-index: 1;
+  top: 50%;
+}
+
+.play-game-btn {
+  background-color: Silver;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  box-shadow: 10px 10px 10px black;
+  text-align: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  margin-top: 20px;
+}
+
+.vt323-regular {
+  font-family: "VT323", monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: normal;
+  text-shadow: 1px;
+}
