@@ -20,8 +20,8 @@ const GenerateWorld = (rows, cols, targetElement) => {
       if (imgName) {
         img.src = `/assets/images/board_images/${imageMap[imgName]}`;
         img.alt = imgName;
-        console.log(imgName);
         divCol.classList.add(imgName);
+        divCol.addEventListener("click", removeTile);
       }
 
       divCol.appendChild(img);
@@ -65,6 +65,53 @@ const imageMap = {
   spider: "spider.png",
   dragon: "dragon.png",
   sky: "sky.png",
+};
+
+const toolsAmount = {
+  stone: 0,
+  stone1: 0,
+  bridge: 0,
+  mushrooms: 0,
+  potato: 0,
+  carrot: 0,
+  ground: 0,
+  grass_block: 0,
+  tree: 0,
+  cat: 0,
+  dog: 0,
+  horse: 0,
+  horse2: 0,
+  horse3: 0,
+  grass: 0,
+  orange: 0,
+  spider: 0,
+  dragon: 0,
+  sky: 0,
+};
+
+const removeTile = (event) => {
+  console.log(event);
+  const clickedElement = event.currentTarget;
+
+  if (!clickedElement) {
+    console.error("Clicked element is undefined.");
+    return;
+  }
+
+  console.log(clickedElement.querySelector("img"));
+
+  // need to change
+  clickedElement.removeChild(clickedElement.querySelector("img"));
+
+  for (const imgClass in imageMap) {
+    if (clickedElement.classList.contains(imgClass)) {
+      console.log(`Element contains class: ${imgClass}`);
+
+      toolsAmount[imgClass] += 1;
+
+      break;
+    }
+  }
 };
 
 const getImageName = (i, j, rows) => {

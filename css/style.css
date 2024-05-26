@@ -69,4 +69,13 @@ img {
   width: 40px;
   height: 40px;
   background-color: grey;
+  cursor: pointer;
+}
+
+.tool-img {
+  width: 50%;
+  height: 50%;
+  margin: 30px;
+  background-color: white;
+  cursor: pointer;
 }
